@@ -14,7 +14,7 @@ public:
     string getType() const { return type; }
     string getDamage() { return to_string(damage); }
 
-    //mutator function to set ALL member variables
+    //mutator function to set ALL member variables, defied outside of the class
     void setCreature(int newStrenght, int newHealth, string newName, string newType);
 
 private:
@@ -74,7 +74,6 @@ int main()
 
         }
 
-        //setCreature(strength, health, ID)
         creatureList[i].setCreature((rand() % 176) + 75, (rand() % 151) + 50, tempName, typesList[rand() % 4]);
         sortedList[i] = creatureList[i];
         tempName = "";
